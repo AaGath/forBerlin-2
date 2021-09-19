@@ -165,7 +165,7 @@ async def group(client, message):
         if poster:
             await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>🔍 Here is The Results For Your Request {search}🔍 ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
@@ -272,11 +272,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Update Channel', url='https://t.me/subin_works'),
-                    InlineKeyboardButton('Source Code', url='https://github.com/subinps/Media-Search-bot')
+                    InlineKeyboardButton('🎬 Movies 🎬', url='https://t.me/PrimeFlixMovies'),
+                    InlineKeyboardButton('📺 TV Series 📺', url='https://t.me/TvseriesCollectionsPrimeflix')
                 ]
                 ]
-            await query.message.edit(text="<b>Developer : <a href='https://t.me/subinps_bot'>SUBIN</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/subin_works'>XTZ Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(നീ ഏതാ..... ഒന്ന് പോടെയ് അവൻ help ചോയ്ച്ച് വന്നിരിക്കുന്നു😤...I'm Different Bot U Know
+           )
 
 
 
@@ -297,8 +298,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
+                        InlineKeyboardButton('🎬 Movies 🎬', url='https://t.me/PrimeFlixMovies'),
+                        InlineKeyboardButton('📺 Tv Series 📺', url='https://t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]
                 
@@ -329,8 +330,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('', url='https://t.me/TvseriesCollectionsPrimeflix')
+                        InlineKeyboardButton('🎬 Movies 🎬', url='https://t.me/PrimeFlixMovies'),
+                        InlineKeyboardButton('📺 TV Series 📺', url='https://t.me/TvseriesCollectionsPrimeflix')
                     ]
                     ]
                 
@@ -346,4 +347,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("That's Not For You 🙂",show_alert=True)
+        await query.answer("🙊 That's Not For You 🙊",show_alert=True)
